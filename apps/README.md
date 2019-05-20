@@ -1,18 +1,27 @@
 # APPS
 
-## MAIN
+## PROJECTS
+
+### MAIN
 
 The main application, the server...<br>
 ...<br>
 
-Can be used as-is for a base, or integrated to another project.<br>
+### CLIENT
 
+The client application, ...<br>
+...<br>
+
+
+## SETUP
+
+The whole project can be used as-is, or integrated to another project (partly or completely).<br>
 
 ### PROJECT AS-IS
 
 - Clone the repository<br>
 
-- If required, manually clone/update the submodule<br>
+- If required, manually clone/update the submodules<br>
     git submodule update --init --recursive
 
 - Run "set_links.bat" script as Administrator<br>
@@ -24,36 +33,62 @@ Can be used as-is for a base, or integrated to another project.<br>
         - StreamingAssets<br>
         from "apps\Libraries\network\Assets" to "Assets".<br>
 
-- Open the project in Unity<br>
+- "Main" project<br>
+    - Open the project in Unity<br>
+    - Import the "Kinect for Unity" package<br>
+        => Look at the section "LIBRARIES - KINECT"<br>
+    - Open "main" scene<br>
 
-- Import the Kinect for Unity package<br>
-    => Look at the section "LIBRARIES - KINECT"<br>
-
-- Open "main" scene<br>
+- "Client" project<br>
+    - Open the project in Unity<br>
+    - Open "main" scene<br>
 
 
 ### INTEGRATE TO ANOTHER PROJECT
 
-- Open an existing Unity project or create a new project<br>
+#### "Main" Project
 
 - Clone/Download the repository and its submodules<br>
 
-- Copy assets from the downloaded repository<br>
+- Open an existing Unity project or create a new project<br>
+
+- In Windows Explorer, copy assets from the downloaded repository<br>
     - From "apps\Main\Assets":<br>
         - Kinect: If importing the Kinect package manually, no need to copy "Plugins" and "Standard Assets" directories.<br>
         - Scenes: Might not be necessary, depending on use.<br>
-        - Scripts<br>
+        - Scripts: Use, adapt or ignore...<br>
     - From "apps\Libraries\network\Assets"<br>
         - SpaceBrew<br>
         - StreamingAssets<br>
 
-- Import the Kinect for Unity package<br>
+- In Unity, import the "Kinect for Unity" package<br>
     => Look at the section "LIBRARIES - KINECT"
+
+
+#### "Client" Project
+
+- Clone/Download the repository and its submodules<br>
+
+- Open an existing Unity project or create a new project<br>
+
+- In Windows Explorer, copy assets from the downloaded repository<br>
+    - From "apps\Client\Assets":<br>
+        - Scenes: Might not be necessary, depending on use.<br>
+        - Scripts: Use, adapt or ignore...<br>
+    - From "apps\Libraries\network\Assets"<br>
+        - SpaceBrew<br>
+        - StreamingAssets<br>
 
 
 ## LIBRARIES
 
 Modules or packages used by the different applications.<br>
+
+
+### SPACEBREW
+
+...<br>
+(from repo...)<br>
 
 
 ### KINECT
