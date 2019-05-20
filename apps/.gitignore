@@ -1,18 +1,20 @@
 /*
 /*/
 
-#[Aa]ssets
-
 !.gitignore
 
-#!/[Mm]ain
-#/[Mm]ain/*
-#!/[Mm]ain/[Aa]ssets
-#!/[Mm]ain/[Pp]rojectSettings/
+!/*/[Pp]rojectSettings/
 
 !/*
 /*/*
+
+!/Libraries/*
+
 !/*/[Aa]ssets/
 !/*/[Pp]ackages/
 !/*/[Pp]rojectSettings/
 
+/[Mm]ain/[Aa]ssets/[Kk]inect/Plugins/
+/[Mm]ain/[Aa]ssets/[Kk]inect/Plugins.meta
+/[Mm]ain/[Aa]ssets/[Kk]inect/Standard Assets/
+/[Mm]ain/[Aa]ssets/[Kk]inect/Standard Assets.meta

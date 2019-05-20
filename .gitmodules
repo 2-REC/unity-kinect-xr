@@ -1,0 +1,3 @@
+[submodule "apps/Libraries/network"]
+	path = apps/Libraries/network
+	url = https://github.com/2-REC/unity-multi
