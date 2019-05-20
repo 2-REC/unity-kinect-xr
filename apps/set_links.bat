@@ -7,14 +7,15 @@ rem del StreamingAssets
 md StreamingAssets
 cd StreamingAssets
 rem mklink /D StreamingAssets "..\..\Libraries\network\Assets\StreamingAssets
-rmdir /Q /S .node
-del /F .node
+rem rmdir /Q /S .node
+rem del /F .node
 mklink /D .node "..\..\..\Libraries\network\Assets\StreamingAssets\.node
-rmdir /Q /S .spacebrew
-del /F .spacebrew
+rem rmdir /Q /S .spacebrew
+rem del /F .spacebrew
 mklink /D .spacebrew "..\..\..\Libraries\network\Assets\StreamingAssets\.spacebrew
 cd..
 
+md SpaceBrew
 cd SpaceBrew
 
 rmdir /Q /S Editor

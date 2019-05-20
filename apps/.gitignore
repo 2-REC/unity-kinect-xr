@@ -3,10 +3,8 @@
 
 !.gitignore
 
-!/*/[Pp]rojectSettings/
-
-!/*
-/*/*
+#!/*
+#/*/*
 
 !/Libraries/*
 
@@ -14,11 +12,14 @@
 !/*/[Pp]ackages/
 !/*/[Pp]rojectSettings/
 
+# SpaceBrew related files (all projects)
+/*/[Aa]ssets/[Ss]paceBrew/
+/*/[Aa]ssets/[Ss]paceBrew.meta
+/*/[Aa]ssets/[Ss]treamingAssets/.node
+/*/[Aa]ssets/[Ss]treamingAssets/.spacebrew
+
+# Kinect related files ("Main" project only)
 /[Mm]ain/[Aa]ssets/[Kk]inect/Plugins/
 /[Mm]ain/[Aa]ssets/[Kk]inect/Plugins.meta
 /[Mm]ain/[Aa]ssets/[Kk]inect/Standard Assets/
 /[Mm]ain/[Aa]ssets/[Kk]inect/Standard Assets.meta
-
-/[Mm]ain/[Aa]ssets/[Ss]paceBrew/
-/[Mm]ain/[Aa]ssets/[Ss]treamingAssets/.node/
-/[Mm]ain/[Aa]ssets/[Ss]treamingAssets/.spacebrew/
