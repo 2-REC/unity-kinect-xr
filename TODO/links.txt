@@ -1,0 +1,114 @@
+
+TODO: CHECK LINKS & SEE WHAT TO KEEP (& DOCUMENT?)
+
+----------
+
+SETUP
+
+- Main Microsoft Dev page
+	https://developer.microsoft.com/en-us/windows/kinect
+- Download Kinect SDK (Windows)
+	https://www.microsoft.com/en-us/download/details.aspx?id=44561
+
+- Setting up Kinect in Unity
+  - Download Unity Pro package
+    ! - Mentions that need Unity Pro, but works with free Unity
+  - Connect the Kinect device
+  - Drivers will install automatically
+  - In Unity, import package:
+    "Kinect.2.0.1410.19000.unitypackage"
+
+- Setting Kinect v2 in Ubuntu
+    https://ythej.wordpress.com/2017/06/05/setting-up-kinect-v2-for-ubuntu/
+
+----------
+
+LIBRARIES
+
+!- OpenKinect/libfreenect2
+    => Open source Kinect library
+    ! - Good to get image data and feed OpenCV etc.!
+    https://openkinect.org/wiki/Main_Page
+    - Git page:
+        https://github.com/OpenKinect/libfreenect2
+    - API Reference:
+        https://openkinect.github.io/libfreenect2/
+
+?- Kinectron
+    => Open-source (?) framework to stream Kinect data...
+    https://kinectron.github.io/
+    - Could look at code (JS?)
+
+!- Vitruvius Framework
+    => Free version, 99$ for Unity support.
+    https://vitruviuskinect.com/
+
+- Using Kinect & PS Move (or balls) for body tracking
+    => Price?
+    https://www.driver4vr.com/
+
+- OpenNI
+    https://structure.io/openni
+    => Abandonned?
+    - Doc:
+        https://s3.amazonaws.com/com.occipital.openni/OpenNI_Programmers_Guide.pdf
+
+- Kinect SDK Samples
+  - SDK Browser installed with Kinect SDK
+- MS Dev Portal - Kinect Forums
+  - SDK Browser installed with Kinect SDK
+    https://social.msdn.microsoft.com/Forums/en-US/home?forum=kinectv2sdk
+
+- Kinect 2 Hands On Lab
+  - App similar to "GreenScreen" example (not Unity)
+    http://kinect.github.io/tutorial/lab05/index.html
+
+- Understanding Kinect V2 Joints and Coordinate System
+    https://medium.com/@lisajamhoury/understanding-kinect-v2-joints-and-coordinate-system-4f4b90b9df16
+
+- Avateering with Kinect V2 – Joint Orientations
+  => "There are two main ways to represent body data from the Kinect:
+    use the absolute positions provided by the SDK which are values in 3D Camera-space (in metres)
+    use the joint orientation data to rotate a hierarchy of bones
+    The latter is the one we will look at here."
+    https://peted.azurewebsites.net/avateering-with-kinect-v2-joint-orientations/
+    GitHub page:
+        https://github.com/peted70/kinectv2-avateer-jointorientations
+
+- Kinect 4 Windows V2 – Unity 3D
+    https://peted.azurewebsites.net/kinect-4-windows-v2-unity-3d/
+    => Old, still relevant?
+
+- Basic unity & kinect
+    https://www.youtube.com/watch?v=aHGlLxh6a88
+
+- Avateering (kinect+unity)!
+    https://pterneas.com/2016/02/18/avateering-kinect/
+
+- Lots of AR/VR articles/tutorials:
+    https://pterneas.com/
+
+- KINECT COORDINATE MAPPING – THE EASY WAY
+    https://pterneas.com/2016/06/23/kinect-coordinate-mapping-vitruvius/
+
+- MEASURING DISTANCES USING KINECT – THE RIGHT WAY
+    https://pterneas.com/2016/08/11/measuring-distances-kinect/
+
+- KINECT JOINT ROTATION – THE DEFINITIVE GUIDE
+    https://pterneas.com/2017/05/28/kinect-joint-rotation/
+    => BUT: uses Vitruvius?
+
+- Kinect example: GreenScreen
+  - Overlay texture data on body data (only tracked humans are displayed)
+    (Provided with the Unity Pro package from MS Kinect website)
+    BUT: BUG!
+    From:
+    https://unitycoder.com/blog/2016/09/29/using-xbox-one-kinect-with-unity/
+    - Fix shader in GreenScreen example:
+        https://forum.unity.com/threads/official-ms-kinect-unity-package-green-screen-shader-error.382295/#post-2484117
+        - Replace "SampleType" by "sampler_MainTex".
+            //sampler SampleType;
+            sampler sampler_MainTex;
+            ...
+            //o = _MainTex.Sample(SampleType, i.tex);
+            o = _MainTex.Sample(sampler_MainTex, i.tex);

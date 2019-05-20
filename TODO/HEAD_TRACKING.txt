@@ -1,0 +1,144 @@
+
+TODO: CHECK LINKS & INFOS.
+=> AND SEE DEPENDING ON IMPLEMENTATION CHOICES/POSSIBILITIES.
+
+==========
+
+HEAD TRACKING:
+
+- Tracking using the Kinect:
+  => Colour tracking in area around the head (area size related to distance from camera)
+
+  Process:
+    1 - Colour Segmentation - Blobs Detection
+      => Biggest clusters of specific colours in RGB image.
+    2 - Positions Determination
+      => From values in depth image at corresponding positions.
+    3 - Pose Estimation
+      => Determine transformation from original model to found model.
+      (Only orientation is required, no position)
+
+
+  Requirements:
+
+  - Hardware:
+    - Minimum 4 (3?) markers to determine the rotation matrix
+    - Markers need to be unique and easily trackable
+      => Bright/luminescent colours.
+    - Markers physical layout must be deterministic
+      => Combined ears and "mohawk"?
+        (Could use flashy 80s earpuffs)
+    - Players need to wear a special headset holding markers
+    - Players can't get out of Kinect FOV (shouldn't anyway, as positioning will not work either)
+      => If losing tracking, use the device's gyroscope? (How to manage?)
+
+  - Software:
+    !? => LOOK AT:
+      - AForge.NET (in C#):
+        http://www.aforgenet.com/
+        https://www.codeproject.com/Questions/738734/blob-detection-in-csharp
+        http://www.emgu.com/forum/viewtopic.php?t=477
+
+    => Search for:
+    - OpenCV for Unity
+      => Look at links in other PowerPoint (or buy plugin...)
+        - OpenCV in Unity:
+          - OpenCV Unity Asset
+            https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088
+            ! - BUT: Not free!
+        - OpenCV from sources
+            http://amin-ahmadi.com/2017/05/24/how-to-use-opencv-in-unity-example-project/
+            https://thomasmountainborn.com/2016/09/11/unity-and-opencv-part-one-install/
+            https://www.raywenderlich.com/5475-introduction-to-using-opencv-with-unity
+      Others:
+      - OpenCV & Unity using sockets:
+        https://github.com/hasanavi/OpenCV-Unity3D-Object-Tracking
+        => Not ideal, as Kinect already integrated in Unity.
+
+    - OpenCV color detection
+      - Colour tracking in Unity (using OpenCV plugin...)
+        https://handmap.github.io/opencv-colour-tracking-unity3d/
+      - Invisibility Cloak using Color Detection and Segmentation with OpenCV:
+        https://www.learnopencv.com/invisibility-cloak-using-color-detection-and-segmentation-with-opencv/
+        (Need to subscribe to download the code)
+      - Blob Detection Using OpenCV (using SimpleBlobDetector):
+        https://www.learnopencv.com/blob-detection-using-opencv-python-c/
+        https://docs.opencv.org/3.4.3/d0/d7a/classcv_1_1SimpleBlobDetector.html
+      - Circular bob detection:
+        https://riptutorial.com/opencv/example/22518/circular-blob-detection
+      !- Fast Color Based Object Tracking Using OpenCV and Kinect
+        https://imufeed.wordpress.com/2013/04/03/fast-color-based-object-tracking-using-opencv-and-kinect/
+        https://www.youtube.com/watch?v=d_c0Bqqvj6c
+      - Color Based Object Tracking Using Open Kinect and Processing
+        http://www.nbertagnolli.com/jekyll/update/2015/10/13/Object_Tracking.html
+
+    - object pose estimation
+      => Might not need to use specific algorithms: only need to determine orientation from the different points.
+
+
+- Tracking using Wii Remote
+  => LED tracking by IR camera on Wiimote
+  - Need extra installation for LED lights
+  - Need more than a sensor bar (viewing angle of Wiimote only around 40°)
+    => Use several LEDs beacon covering the whole gaming area (at least front & sides)
+
+
+=> Probably the simplest solution is to only use Kinect tracking (easier hardware setup and software processing).
+But maybe the Wiimote tracking would be more precise (& already gives the transformation).
+
+
+-------------
+
+KINECT TRACKING
+
+- Colour tracking:
+  - How to Detect and Track Red, Green and Blue Colored Object in LIVE Video:
+    https://www.mathworks.com/matlabcentral/fileexchange/40154-how-to-detect-and-track-red-green-and-blue-colored-object-in-live-video
+
+
+----
+
+WII REMOTE TRACKING
+
+"The Wii IR camera [...] has an integrated processor which outputs the X and Y positions and size of the 4 brightest IR points that is sees."
+
+
+- Can get position & orientation with custom 4 LEDs beacon
+  - 6DOF Positional Tracking with the Wiimote
+    https://franklinta.com/2014/09/30/6dof-positional-tracking-with-the-wiimote/
+  - Tracking using Wiimote
+    https://www.youtube.com/watch?v=KyvIlKSA0BA
+  - VRHome - Wiimote Virtual Reality Desktop
+    => Wiimote tracking with 4 LEDs
+    https://channel9.msdn.com/coding4fun/articles/Wiimote-Virtual-Reality-Desktop
+    http://www.vrhome.de/downloads
+  - Wii Remote Tracking:
+    From:
+    http://idav.ucdavis.edu/~okreylos/ResDev/Wiimote/MainPage.html
+    - Technology:
+      => Maths.
+      http://idav.ucdavis.edu/~okreylos/ResDev/Wiimote/Technology.html
+    - IR Tracker Beacon:
+      => Homemade sensor bar.
+      http://idav.ucdavis.edu/~okreylos/ResDev/Wiimote/IRBeacon.html
+!
+OR:
+!- Using the sensor bar, can determine the yaw (& combine with the rest!)
+  BUT: limited to 40°!
+  => Use multiple bars...
+    https://www.dailymotion.com/video/xu7i0f
+    (look at PDFs)
+
+OR:
+- Can also have data from gyroscopes (preferably with Wii Motion Plus addon)
+
+
+=========================
+
+LIBRARIES:
+
+!
+- Unity Wiimote API:
+  https://github.com/Flafla2/Unity-Wiimote
+- Wiimote library:
+    https://github.com/BrianPeek/WiimoteLib
