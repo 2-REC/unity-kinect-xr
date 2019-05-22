@@ -5,6 +5,9 @@
         => Infos related to head tracking (as orientation using gyroscope is not reliable)
     - [ ] links.txt
         => Links... (check all and see what to keep)
+- [ ] Find how to manage clients connections
+    => Server discovery? Hardcoded IP? ...?
+
 
 # DOCS
 - [ ] KINECT_AR.pptx
@@ -18,7 +21,15 @@
         => To avoid copyright issues (or mention owners when required).
     - [ ] Delete images when done with PPT (?)
 
+
 # APPS
+- [ ] Main
+    - [ ] Send less messages to SpaceBrew
+        => At time intervals instead of every frame
+- [ ] Client:
+    - [ ] Add the "Camera Viewer" object
+    - [ ] Make the changes done during demo at RMIT (stereo view)
+    - [ ] Fix the orientation problem ... (look at "HEAD_TRACKING.txt" in "TODO")
 - [ ] Libraries:
-  - [ ] Remove "Camera Viwer" from this repository
-    => Make a separate repostitory, and use it as a submodule.
+    - [ ] Remove "Camera Viewer" from this repository
+        => Make a separate repostitory, and use it as a submodule.
