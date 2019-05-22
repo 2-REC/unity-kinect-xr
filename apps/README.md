@@ -119,3 +119,9 @@ However, it doesn't seem to change anymore, so the provided package should be en
 
 The last step is not required, but helps kkeping a cleaner assets folder.<br>
 (Also it is required to be like this in order for the ".gitignore" to work properly when using Git)<br>
+
+
+### CAMERA VIEWER
+
+Allows to visualise a device camera feed (front or rear) as background of a Unity camera or GameObject, useful for AR like camera view.<br>
+...<br>

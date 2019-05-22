@@ -19,4 +19,6 @@
     - [ ] Delete images when done with PPT (?)
 
 # APPS
-- [ ]
+- [ ] Libraries:
+  - [ ] Remove "Camera Viwer" from this repository
+    => Make a separate repostitory, and use it as a submodule.
