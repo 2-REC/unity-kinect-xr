@@ -1149,12 +1149,12 @@ PrefabInstance:
     - target: {fileID: 231169245174659092, guid: 8e504e8fd2fa12b4995812e993586d18,
         type: 3}
       propertyPath: publishers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 231169245174659092, guid: 8e504e8fd2fa12b4995812e993586d18,
         type: 3}
       propertyPath: subscribers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 231169245174659092, guid: 8e504e8fd2fa12b4995812e993586d18,
         type: 3}

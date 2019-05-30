@@ -1725,11 +1725,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: publishers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: subscribers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: messageTypes.Array.size
@@ -1778,6 +1778,14 @@ PrefabInstance:
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: messageTypes.Array.data[0]
       value: MOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: subscribers.Array.data[0].name
+      value: subClientMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: publishers.Array.data[0].name
+      value: pubClientMove
       objectReference: {fileID: 0}
     - target: {fileID: 11438994, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: messageReceiver
