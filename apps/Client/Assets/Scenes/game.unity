@@ -1732,6 +1732,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: messageTypes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: serverAddress
       value: 192.168.40.23
       objectReference: {fileID: 0}
@@ -1741,7 +1745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: publishers.Array.data[1].msgType
-      value: 0
+      value: <default>
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: subscribers.Array.data[1].name
@@ -1749,7 +1753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: subscribers.Array.data[1].msgType
-      value: 0
+      value: <default>
       objectReference: {fileID: 0}
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: descriptionText
@@ -1762,6 +1766,18 @@ PrefabInstance:
     - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: useConfigManager
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: publishers.Array.data[0].msgType
+      value: MOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: subscribers.Array.data[0].msgType
+      value: MOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415470, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
+      propertyPath: messageTypes.Array.data[0]
+      value: MOVE
       objectReference: {fileID: 0}
     - target: {fileID: 11438994, guid: b6a1a8f23a7832744ad06d7e307eaa68, type: 3}
       propertyPath: messageReceiver
