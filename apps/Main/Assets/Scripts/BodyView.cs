@@ -12,7 +12,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Kinect = Windows.Kinect;
 
-public class BodySourceView : MonoBehaviour {
+public class BodyView : MonoBehaviour {
 
 ////
 public Transform head;
@@ -22,9 +22,10 @@ public Transform head;
     public GameObject BodySourceManager;
 
     private Dictionary<ulong, GameObject> _Bodies = new Dictionary<ulong, GameObject>();
-    private BodySourceManager _BodyManager;
+    private KinectInputManager _BodyManager;
 
 //// FULL BODY - BEGIN
+//TODO: should move to a separate class, and moved to the "Kinect/Scripts" directory
     private Dictionary<Kinect.JointType, Kinect.JointType> _BoneMap = new Dictionary<Kinect.JointType, Kinect.JointType>() {
         { Kinect.JointType.FootLeft, Kinect.JointType.AnkleLeft },
         { Kinect.JointType.AnkleLeft, Kinect.JointType.KneeLeft },
@@ -65,12 +66,12 @@ public Transform head;
         }
 
 //TODO: should be done in "Start" (?)
-        _BodyManager = BodySourceManager.GetComponent<BodySourceManager>();
+        _BodyManager = BodySourceManager.GetComponent<KinectInputManager>();
         if (_BodyManager == null) {
             return;
         }
 
-        Kinect.Body[] data = _BodyManager.GetData();
+        Kinect.Body[] data = _BodyManager.GetBodyData();
         if (data == null) {
             return;
         }

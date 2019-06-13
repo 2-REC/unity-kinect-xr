@@ -943,6 +943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb42135443cf0ec45ad40733f05b78a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useColorInput: 0
+  useDepthInput: 0
+  useBodyInput: 1
+  useBodyIndexInput: 0
 --- !u!4 &1569431879
 Transform:
   m_ObjectHideFlags: 0
